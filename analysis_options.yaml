@@ -25,6 +25,8 @@ linter:
     avoid_print: true
     prefer_single_quotes: true
     use_if_null_to_convert_nulls_to_bools: true
+    prefer_relative_imports: true
+    directives_ordering: true
     # avoid_as: false  # Uncomment to disable the `avoid_as` rule
 
 
