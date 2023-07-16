@@ -8,7 +8,8 @@ class FailureWidget extends StatelessWidget {
   final Failure? failure;
   final VoidCallback onRetry;
 
-  const FailureWidget({Key? key, required this.failure, required this.onRetry}) : super(key: key);
+  const FailureWidget({Key? key, required this.failure, required this.onRetry})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,8 @@ class FailureWidget extends StatelessWidget {
 class ConnectionErrorWidget extends StatelessWidget {
   final VoidCallback onRetry;
 
-  const ConnectionErrorWidget({Key? key, required this.onRetry}) : super(key: key);
+  const ConnectionErrorWidget({Key? key, required this.onRetry})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class ConnectionErrorWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SvgPicture.asset("assets/images/connection.svg", width: 120),
+          SvgPicture.asset('assets/images/connection.svg', width: 120),
           const SizedBox(height: 16),
           Text(
             S.of(context).noConnection,
@@ -49,7 +51,8 @@ class ConnectionErrorWidget extends StatelessWidget {
 class UnexpectedErrorWidget extends StatelessWidget {
   final VoidCallback onRetry;
 
-  const UnexpectedErrorWidget({Key? key, required this.onRetry}) : super(key: key);
+  const UnexpectedErrorWidget({Key? key, required this.onRetry})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +61,7 @@ class UnexpectedErrorWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SvgPicture.asset("assets/images/error_ghost.svg", width: 120),
+          SvgPicture.asset('assets/images/error_ghost.svg', width: 120),
           const SizedBox(height: 16),
           Text(
             S.of(context).pleaseTryAgainLaterWeArenworkingToFixTheIssue,

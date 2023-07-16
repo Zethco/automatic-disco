@@ -1,6 +1,6 @@
 sealed class Resource<T, E> {}
 
-class RLoading<T,E> extends Resource<T, E> {}
+class RLoading<T, E> extends Resource<T, E> {}
 
 class RError<T, E> extends Resource<T, E> {
   final E error;
@@ -8,7 +8,7 @@ class RError<T, E> extends Resource<T, E> {
   RError(this.error);
 }
 
-class RSuccess<T,E> extends Resource<T,E> {
+class RSuccess<T, E> extends Resource<T, E> {
   final T data;
   RSuccess(this.data);
 }
