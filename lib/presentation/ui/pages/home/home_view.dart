@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../domain/bloc/auth/auth_cubit.dart';
 import '../../../../domain/bloc/get_products/get_products_cubit.dart';
 import '../../../../domain/bloc/get_products/get_products_state.dart';
@@ -6,7 +8,6 @@ import '../../custom/app_theme_switch.dart';
 import '../../custom/failure_widget.dart';
 import 'widget/products_list_widget.dart';
 import 'widget/products_loading.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
