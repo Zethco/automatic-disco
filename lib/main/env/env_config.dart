@@ -1,5 +1,5 @@
 class EnvConfig {
-  static const apiKey = String.fromEnvironment('API_KEY', defaultValue: "NA");
+  static const apiKey = String.fromEnvironment('API_KEY', defaultValue: 'NA');
 }
 
 enum Flavor { dev, qa, prod }

@@ -16,7 +16,7 @@ abstract class PlatformInfo {
   String get getCurrentPlatformType;
 }
 
-enum PlatformType { Web, iOS, Android, MacOS, Fuchsia, Linux, Windows, Unknown }
+enum PlatformType { web, ios, android, macOs, fuchsia, linux, windows, unknown }
 
 extension PlatformTypeString on PlatformType {
   String get name => toString().split('.').last;

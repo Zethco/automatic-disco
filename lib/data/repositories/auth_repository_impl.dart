@@ -2,9 +2,9 @@ import 'dart:async';
 
 import '../../core/failure/failure.dart';
 import '../../core/result_type.dart';
-import '../preferences/preferences.dart';
 import '../../domain/models/auth_status.dart';
 import '../../domain/repositories/auth_repository.dart';
+import '../preferences/preferences.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
   final Preferences _preferences;

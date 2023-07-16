@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  async: ^2.11.0
   connectivity_plus: ^4.0.1
   cupertino_icons: ^1.0.2
   dio: ^5.2.1+1
@@ -121,6 +122,5 @@ flutter:
     - family: Roboto Italic
       fonts:
         - asset: fonts/Roboto-Italic.ttf
-
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

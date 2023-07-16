@@ -1,7 +1,7 @@
-import '../preferences/preferences.dart';
 import '../../domain/models/app_lang.dart';
 import '../../domain/models/theme_type.dart';
 import '../../domain/repositories/common_repository.dart';
+import '../preferences/preferences.dart';
 
 class CommonRepositoryImpl implements CommonRepository {
   final Preferences _preferences;

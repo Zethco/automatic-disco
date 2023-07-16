@@ -1,5 +1,6 @@
-import 'preferences.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'preferences.dart';
 
 class PreferencesImpl extends Preferences {
   final String _appLangKey = 'appLang';
