@@ -1,0 +1,6 @@
+enabled: true
+
+exclude:
+- "windows/**"
+- "linux/**"
+- "macos/**"
