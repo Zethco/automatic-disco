@@ -1,7 +1,8 @@
 import 'package:flutter/widgets.dart';
-// import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-// import '../../../../di/di_init.dart';
+import '../../../../di/di_init.dart';
+import '../../../../domain/bloc/get_products/get_products_cubit.dart';
 import 'home_view.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,6 +10,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const HomeView();
+    return BlocProvider(
+      create: (_) => getIt<GetProductsCubit>()..fetchProducts(),
+      child: const HomeView(),
+    );
   }
 }

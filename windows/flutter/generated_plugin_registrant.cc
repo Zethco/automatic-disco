@@ -10,8 +10,8 @@
 #include <permission_handler_windows/permission_handler_windows_plugin.h>
 
 void RegisterPlugins(flutter::PluginRegistry* registry) {
-    ConnectivityPlusWindowsPluginRegisterWithRegistrar(
-        registry->GetRegistrarForPlugin("ConnectivityPlusWindowsPlugin"));
-    PermissionHandlerWindowsPluginRegisterWithRegistrar(
-        registry->GetRegistrarForPlugin("PermissionHandlerWindowsPlugin"));
+  ConnectivityPlusWindowsPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("ConnectivityPlusWindowsPlugin"));
+  PermissionHandlerWindowsPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("PermissionHandlerWindowsPlugin"));
 }
