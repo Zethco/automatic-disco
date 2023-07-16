@@ -55,7 +55,8 @@ class CustomNetworkImage extends StatelessWidget {
               imageUrl ?? '',
               width: width,
               height: height,
-              color: svgIconColor,
+              colorFilter:
+                  ColorFilter.mode(color ?? Colors.black, BlendMode.srcIn),
             ),
           )
         : Container(
