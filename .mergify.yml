@@ -1,7 +1,31 @@
 pull_request_rules:
   - name: Automatic merge on approval
     conditions:
-      - "#approved-reviews-by>=1"
+      - "#approved-reviews-by>=2"
     actions:
       merge:
         method: merge
+
+  - name: ask to resolve conflict
+    conditions:
+      - conflict
+    actions:
+        comment:
+          message: This pull request is now in conflicts. Could you fix it @{{author}}? 🙏
+
+  - name: convert to draft
+    conditions:
+      - "#check-failure>0"
+    actions:
+      comment:
+          message: This pull request has some failing checks. Could you fix it @{{author}}? 🙏
+      edit:
+        draft: True
+
+  - name: automatic update for PR marked as "Ready-to-Go"
+    conditions:
+      - -conflict # skip PRs with conflicts
+      - -draft # filter-out GH draft PRs
+      - label="Ready-to-Go"
+    actions:
+      update:
