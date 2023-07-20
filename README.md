@@ -1,5 +1,7 @@
 # fintrack
 
+[![CodeFactor](https://www.codefactor.io/repository/github/zethco/automatic-disco/badge)](https://www.codefactor.io/repository/github/zethco/automatic-disco)
+
 A new Flutter project.
 
 ## Getting Started
