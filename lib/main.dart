@@ -1,3 +1,5 @@
+// DO NOT RUN THIS FILE use vscode debug configs
+
 import 'package:flutter/material.dart';
 
 void main() {
