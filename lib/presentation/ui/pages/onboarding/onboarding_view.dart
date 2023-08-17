@@ -1,6 +1,4 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class OnboardingView extends StatelessWidget {
   const OnboardingView({super.key});
@@ -39,43 +37,46 @@ class OnboardingView extends StatelessWidget {
       backgroundColor: background,
       body: SafeArea(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            const Spacer(),
-            Image.asset(
-              'assets/images/logo.png',
-              width: (size.width * 0.4),
+            Padding(
+              padding: const EdgeInsets.only(top: 30, bottom: 50),
+              child: Image.asset(
+                'assets/images/logo.png',
+                width: (size.width * 0.4),
+              ),
             ),
-            const Spacer(),
             Expanded(
               child: PageView.builder(
-                  itemCount: onboardingData.length,
-                  itemBuilder: (context, index) {
-                    return SizedBox(
-                      width: (size.width * 0.80),
-                      height: (size.height * 0.30),
-                      child: _OnboardingContent(
-                        assetImage: onboardingData[index]['image']!,
-                        title: onboardingData[index]['title']!,
-                        description: onboardingData[index]['description']!,
-                      ),
-                    );
-                  }),
+                itemCount: onboardingData.length,
+                itemBuilder: (context, index) {
+                  return _OnboardingContent(
+                    assetImage: onboardingData[index]['image']!,
+                    title: onboardingData[index]['title']!,
+                    description: onboardingData[index]['description']!,
+                  );
+                },
+              ),
             ),
-            const Spacer(),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Divider(
+                thickness: 20,
+              ),
+            ),
             OutlinedButton(
               style: OutlinedButton.styleFrom(
                 side: BorderSide.none,
                 backgroundColor: secondary,
               ),
               onPressed: () {},
-              child: Text(
+              child: const Text(
                 'Categorias',
                 style: TextStyle(
                   color: primary,
                 ),
               ),
             ),
-            const Spacer(),
           ],
         ),
       ),
@@ -96,7 +97,9 @@ class _OnboardingContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Flex(
+      direction: Axis.vertical,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(assetImage),
         Text(
