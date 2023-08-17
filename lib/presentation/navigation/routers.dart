@@ -2,6 +2,7 @@ import 'package:go_router/go_router.dart';
 
 import '../ui/pages/home/home_page.dart';
 import '../ui/pages/login/login_page.dart';
+import '../ui/pages/onboarding/onboarding_page.dart';
 import '../ui/pages/sign_up/sign_up_page.dart';
 import '../ui/pages/splash/splash_page.dart';
 
@@ -12,23 +13,31 @@ class Routers {
       GoRoute(
         name: 'login',
         path: '/login',
-        builder: (context, state) => const LoginPage(),
+        builder: (context, state) => const OnboardingPage(),
+        //builder: (context, state) => const LoginPage(),
       ),
       GoRoute(
         name: 'splash',
         path: '/splash',
-        builder: (context, state) => const SplashPage(),
+        builder: (context, state) => const OnboardingPage(),
+        //builder: (context, state) => const SplashPage(),
       ),
       GoRoute(
         name: 'signUp',
         path: '/signUp',
-        builder: (context, state) => const SignUpPage(),
+        builder: (context, state) => const OnboardingPage(),
+        //builder: (context, state) => const SignUpPage(),
       ),
       GoRoute(
         name: 'home',
         path: '/home',
-        builder: (context, state) => const HomePage(),
+        builder: (context, state) => const OnboardingPage(),
       ),
+      GoRoute(
+        name: 'onboarding',
+        path: '/onboarding',
+        builder: (context, state) => const OnboardingPage(),
+      )
     ],
   );
 }
